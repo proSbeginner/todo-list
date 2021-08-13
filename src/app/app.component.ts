@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-list';
+  taskControl = new FormControl('')
+  items: string[] = []
+
+  add() {
+    this.items.push(this.taskControl.value.trim())
+    this.taskControl.setValue('')
+  }
 }
