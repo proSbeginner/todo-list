@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" position="end">
+
+    <app-todo-desc></app-todo-desc>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <div class="container-fluid">
+
+      <app-todo-title></app-todo-title>
+
+      <div *ngFor="let task of tasks; let i = index" class="row mt-3 d-flex justify-content-center">
+        <div class="col-12 col-sm-6 bg-dark bg-gradient text-light">
+          <div class="py-1 d-flex align-items-center" (click)="onSelected(task)">
+            <div>{{i + 1}}. {{task.title}}</div>
+            <button mat-mini-fab color="default" class="ms-auto" (click)="delete(task)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

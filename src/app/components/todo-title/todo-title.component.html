@@ -1,0 +1,14 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-sm-6 bg-dark bg-gradient text-light">
+    <div class="mb-3">
+      <label class="form-label">Task Title</label>
+      <input class="form-control" [formControl]="titleControl">
+    </div>
+    <div class="mb-3 d-flex">
+      <div class="ms-auto">
+        <button mat-raised-button class="mx-1" (click)="clearAll()">CLEAR ALL</button>
+        <button mat-raised-button color="primary" class="mx-1" (click)="add()">ADD</button>
+      </div>
+    </div>
+  </div>
+</div>
