@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +6,5 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  taskControl = new FormControl('')
-  items: string[] = []
 
-  add() {
-    this.items.push(this.taskControl.value.trim())
-    this.taskControl.setValue('')
-  }
 }
