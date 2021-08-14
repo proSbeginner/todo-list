@@ -23,4 +23,8 @@ export class TodoListComponent implements OnInit {
   clearAll() {
     this.items = []
   }
+
+  delete(index: number) {
+    this.items.splice(index, 1)
+  }
 }
