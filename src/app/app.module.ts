@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,10 @@
         <input class="form-control" [formControl]="taskControl">
       </div>
       <div class="mb-3 d-flex">
-        <button class="btn btn-primary ms-auto" (click)="add()">ADD</button>
+        <div class="ms-auto">
+          <button mat-raised-button class="mx-1" (click)="clearAll()">CLEAR ALL</button>
+          <button mat-raised-button color="primary" class="mx-1" (click)="add()">ADD</button>
+        </div>
       </div>
     </div>
   </div>

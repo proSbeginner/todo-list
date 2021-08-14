@@ -21,6 +21,6 @@ export class TodoListComponent implements OnInit {
   }
 
   clearAll() {
-    
+    this.items = []
   }
 }
